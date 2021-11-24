@@ -1,0 +1,123 @@
+  @media (max-width:360px)
+{
+
+  .container
+  {
+    flex-wrap: wrap-reverse;
+    height:10rem;
+    width:fit-content;
+  }
+  #search-field 
+  {
+    width: 16rem;
+    margin-left:3rem;
+  }
+  .profile
+  {
+    margin-left:3rem;
+  }
+
+  .dashboard
+  {
+    gap:0.5rem;
+    margin-left:3rem;
+  }
+
+  .dashboard> button
+  {
+      margin-left: 3rem;
+      margin-bottom: 1rem;
+  }
+
+  
+  /* .remainder
+  {
+      /* margin-left:-4rem;
+  } */
+
+  .remainder-content
+  {
+    width:250px;
+   } 
+  
+  
+  .icon >.fa-clipboard-list:before
+  {
+    margin-left:-1rem;
+  }
+  #pbar
+  {
+    width:7rem;
+    margin-top:2.8rem;
+  }
+
+  /* .chart
+  {
+     margin-left: -4rem; 
+  } */
+  .linechart,.dchart
+  {
+    width:250px;
+   
+  }
+ 
+  .linechart>i
+  {
+      margin-left:5rem;
+  }
+  
+  .dchart
+  {
+    margin-top: -1rem;
+  } 
+
+  .projects
+  {
+    width:250px;
+    height:24rem;
+    /* margin-left:1.38rem; */
+    margin-top: -1rem;
+  }
+  
+  .illustration 
+  {
+    width:250px;
+    /* margin-right:5.8rem; */
+    height:34rem;
+    font-size:0.95rem;
+    text-align:justify;
+  }
+  .illustration > img
+  {
+    margin-left: 0.5rem;
+  }
+
+  .color-container
+  {
+    margin-left:2rem;
+  }
+  .colors
+  {
+    width:250px;
+  }
+  .development
+  {
+    width:250px;
+    height:25rem;
+    /* margin-left:-2.8rem; */
+    margin-bottom:2rem;
+    margin-top: 0rem;
+  }
+  .footer
+  {
+    width:100%;
+  }
+
+  #float-button
+  {
+  top:22rem;
+  left:13rem;
+  /* display: none; */
+  }
+
+} 
