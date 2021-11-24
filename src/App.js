@@ -242,14 +242,14 @@ function Linechart()
   const options = {
     scales: {
       y: { beginAtZero: true},
-      }
+      },
+      maintainAspectRatio:false
   };
   return(<div className="linechart">
    <Card>
     <Card.Header as="h5" style={{color:"#4e73df",fontWeight:"bold"}}>Earnings Overview <i className="fas fa-ellipsis-v licon" ></i></Card.Header>
      <Card.Body> 
-  <Line data={data} options={options}  height={250} options={{ maintainAspectRatio:false }} 
- 
+  <Line data={data} options={options}  height={250} 
 />
    </Card.Body>
 </Card>
@@ -279,6 +279,7 @@ function Doughnutchart()
     scales: {
       y: { beginAtZero: true},
     },
+    maintainAspectRatio:false
     
   };
 
@@ -305,7 +306,7 @@ function Doughnutchart()
     </Card.Header>
     
      <Card.Body> 
-  < Doughnut data={data} options={options}  height={250} options={{ maintainAspectRatio:false }} 
+  < Doughnut data={data} options={options}  height={250}  
 />
    </Card.Body>
 </Card>
