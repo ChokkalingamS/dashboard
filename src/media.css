@@ -5,7 +5,7 @@
   {
     flex-wrap: wrap-reverse;
     height:10rem;
-    width:fit-content;
+    width:400px;
   }
   #search-field 
   {
@@ -28,12 +28,6 @@
       margin-left:3.7rem;
       margin-bottom: 1rem;
   }
-
-  
-  /* .remainder
-  {
-      /* margin-left:-4rem;
-  } */
 
   .remainder-content
   {
@@ -64,7 +58,6 @@
 
   .chart
   {
-     /* margin-left:1rem; */
      margin:1rem 0 1rem 1rem ; 
   }
   .linechart,.dchart
@@ -124,20 +117,18 @@
   {
     width:350px;
     height:20rem;
-    /* margin-left:-2.8rem; */
     margin-bottom:2rem;
     margin-top: 0rem;
   }
   .footer
   {
-    width:100%;
+    width:400px;
   }
 
   #float-button
   {
   top:22rem;
   left:21rem;
-  /* display: none; */
   }
 
 } 
