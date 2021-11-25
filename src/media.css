@@ -10,22 +10,22 @@
   #search-field 
   {
     width: 16rem;
-    margin-left:3rem;
+    margin-left:4rem;
   }
   .profile
   {
-    margin-left:3rem;
+    margin-left:4rem;
   }
 
   .dashboard
   {
     gap:0.5rem;
-    margin-left:3rem;
+    margin-left:5rem;
   }
 
   .dashboard> button
   {
-      margin-left: 3rem;
+      margin-left:3.7rem;
       margin-bottom: 1rem;
   }
 
@@ -37,53 +37,73 @@
 
   .remainder-content
   {
-    width:250px;
+    width:350px;
    } 
-  
+   .fa-calendar
+   {
+     margin-left:6.5rem;
+   }
+   .fa-dollar-sign
+   {
+     margin-left:7.8rem;
+   }
   
   .icon >.fa-clipboard-list:before
   {
-    margin-left:-1rem;
+    margin-left:0.25rem;
   }
   #pbar
   {
-    width:7rem;
+    width:12rem;
     margin-top:2.8rem;
   }
-
-  /* .chart
+  .fa-comments
   {
-     margin-left: -4rem; 
-  } */
+    margin-left:6.3rem;
+  }
+
+  .chart
+  {
+     /* margin-left:1rem; */
+     margin:1rem 0 1rem 1rem ; 
+  }
   .linechart,.dchart
   {
-    width:250px;
+    width:350px;
    
   }
  
-  .linechart>i
+  .linechart
   {
-      margin-left:5rem;
+      margin-bottom: 1.5rem;
+  }
+  .licon
+  {
+    margin-left:8.5rem;
   }
   
   .dchart
   {
     margin-top: -1rem;
+  }
+  .dcicon
+  {
+    margin-left:9.5rem;
   } 
 
   .projects
   {
-    width:250px;
+    width:350px;
     height:24rem;
-    /* margin-left:1.38rem; */
+    margin-left:2rem;
     margin-top: -1rem;
   }
   
   .illustration 
   {
-    width:250px;
-    /* margin-right:5.8rem; */
-    height:34rem;
+    width:350px;
+    margin-right:0.8rem;
+    height:30rem;
     font-size:0.95rem;
     text-align:justify;
   }
@@ -94,16 +114,16 @@
 
   .color-container
   {
-    margin-left:2rem;
+    margin-left:1.8rem;
   }
   .colors
   {
-    width:250px;
+    width:350px;
   }
   .development
   {
-    width:250px;
-    height:25rem;
+    width:350px;
+    height:20rem;
     /* margin-left:-2.8rem; */
     margin-bottom:2rem;
     margin-top: 0rem;
@@ -116,7 +136,7 @@
   #float-button
   {
   top:22rem;
-  left:13rem;
+  left:21rem;
   /* display: none; */
   }
 
