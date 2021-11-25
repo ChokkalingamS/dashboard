@@ -1,10 +1,11 @@
-
+// Stylesheet
 import './App.css';
 import './media.css';
 
+// React Bootstrap
+import { InputGroup,Button,FormControl,ProgressBar,Card} from 'react-bootstrap';
 
-import { InputGroup,Button,FormControl,ProgressBar,Card,Dropdown } from 'react-bootstrap';
-
+// React Material UI
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
@@ -13,6 +14,7 @@ import Avatar from '@mui/material/Avatar';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import Fab from '@mui/material/Fab';
 
+// React ChartJs
 import {Line,Doughnut } from 'react-chartjs-2';
 
 
@@ -28,6 +30,8 @@ export default function App() {
 function Dashboard()
 {
   return <div>
+
+          {/* Header */}
           <Navigationbar/>
 
           <div className="dashboard">
@@ -35,6 +39,7 @@ function Dashboard()
             <Button> <i className="fas fa-download"></i>Generate Report</Button>
           </div>
           
+          {/* Body */}
           <Remainder/>
           
           <div className="chart">
@@ -54,12 +59,13 @@ function Dashboard()
           <ColorPallet/>
           <Development/>
           </div>
-          
+
+          {/* Footer */}
           <div className="footer"><p>Copyright © Your Website 2021</p></div>
   </div>
 }
 
-
+// Header
 function Navigationbar()
 {
   return <div className="container" >
@@ -80,13 +86,13 @@ function Navigationbar()
 
         <div>  <label>Douglas McGee</label></div> 
             <div>
- <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg">D</Avatar> </div> 
+             <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg">D</Avatar> </div> 
             </div>
          
 </div>
 }
 
-
+// Remainder Section
 function Remainder()
 {
   let calendar_icon=<i className="fas fa-calendar"></i>
@@ -129,7 +135,80 @@ function Remainder()
   </div>
 }
 
+// Chart:
 
+// Line Chart
+function Linechart()
+{
+  const data = {
+    labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'],
+    datasets: [
+      {
+        label: '',
+        data:[0, 10000, 5000, 15000,10000,20000,15000,25000,20000,30000,25000,40000],
+        fill: true,
+        backgroundColor: '#dbe1eb',
+        borderColor: '#4e73df',
+        tension: 0.5,
+        display:false
+      }
+    ],
+  };
+  
+  const options = {
+    scales: {
+      y: { beginAtZero: true},
+      },
+      maintainAspectRatio:false };
+  return(<div className="linechart">
+   <Card>
+    <Card.Header as="h5" style={{color:"#4e73df",fontWeight:"bold"}}>Earnings Overview <i className="fas fa-ellipsis-v licon" ></i></Card.Header>
+     <Card.Body> 
+  <Line data={data} options={options}  height={250} />
+   </Card.Body>
+</Card>
+</div>)
+}
+
+
+// Doughnut Chart
+function Doughnutchart()
+{
+  const data = {
+    labels: ['Direct','Social','Referral'],
+    datasets: [
+      {
+        label: '',
+        data:[55,30,15],
+        fill: true,
+        backgroundColor: ['#4e73df','#1cc88a','#36b9cc'],
+        tension: 0.5,
+      }
+    ],
+  };
+
+  const options = { scales: {
+      y: { beginAtZero: true},
+    },
+    maintainAspectRatio:false
+    
+  };
+  return(<div className="dchart">
+   <Card>  
+     {/* Heading */}
+    <Card.Header as="h5" style={{color:"#4e73df",fontWeight:"bold"}}>Revenue Sources
+    
+    <i className="fas fa-ellipsis-v dcicon"  style={{cursor:"pointer"}}></i>
+    </Card.Header>
+     <Card.Body> 
+  < Doughnut data={data} options={options}  height={250} />
+   </Card.Body>
+</Card>
+
+</div>)
+}
+
+// Project Section
 function Projects() 
 {
   let p1= <ProgressBar  variant="server-migration" now={20} />
@@ -159,8 +238,10 @@ function Projects()
              return( <div className="projects">
               
                <div  className="container-head"  >
+                 {/* Heading */}
                <p style={{color:"#4e73df",fontWeight:"bolder",fontSize:"20px"}}>Projects</p>
                </div>
+               {/* Content */}
                {data.map(({name,percentage,progress},i)=>{ return(
                  <div key ={i} className="individual-status">
                    <div className="name-percentage">
@@ -173,6 +254,25 @@ function Projects()
              </div>)
 }
 
+// Illustration
+function Illustrations()
+{
+  return <div className="illustration">
+    <div className="container-head">
+    {/* Heading */}
+    <p style={{color:"#4e73df",fontWeight:"bolder",fontSize:"20px"}}>Illustrations</p>
+    </div> 
+    {/* Content */}
+    <img src="https://startbootstrap.github.io/startbootstrap-sb-admin-2/img/undraw_posting_photo.svg" alt="Img"></img>
+    <p style={{alignText:"justify",padding:"15px"}}>Add some quality, svg illustrations to your project courtesy of unDraw, a constantly updated collection of beautiful svg images
+       that you can use completely free and without attribution!</p>
+      <a href="https://undraw.co/" ><p style={{color:"#4e73df",marginTop:"-1rem",marginLeft:"1rem"}}>Browse Illustrations on unDraw →</p></a>
+  </div>
+  
+}
+
+
+// Color Pallet
 function ColorPallet()
 {
   let colorlist=[{name:"Primary",code:"#4e73df"},{name:"Success",code:"#1cc88a"},
@@ -191,29 +291,15 @@ function ColorPallet()
 }
 
 
-function Illustrations()
-{
-  return <div className="illustration">
-    <div className="container-head">
-    <p style={{color:"#4e73df",fontWeight:"bolder",fontSize:"20px"}}>Illustrations</p>
-    </div> 
-    
-    <img src="https://startbootstrap.github.io/startbootstrap-sb-admin-2/img/undraw_posting_photo.svg" alt="Img"></img>
-    <p style={{alignText:"justify",padding:"15px"}}>Add some quality, svg illustrations to your project courtesy of unDraw, a constantly updated collection of beautiful svg images
-       that you can use completely free and without attribution!</p>
-      <a href="https://undraw.co/" ><p style={{color:"#4e73df",marginTop:"-1rem",marginLeft:"1rem"}}>Browse Illustrations on unDraw →</p></a>
-  </div>
-  
-}
-
+// Development
 function Development()
 {
 return (<div className="development">
-        
+        {/* Heading */}
         <div className="container-head">
         <p style={{color:"#4e73df",fontWeight:"bolder",fontSize:"20px"}}>Development Approach</p>
         </div> 
-
+        {/* Content */}
         <p style={{alignText:"justify",padding:"5px",marginLeft:"10px"}}>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance.
            Custom CSS classes are used to create custom components and custom utility classes.</p>
         <p style={{alignText:"justify",marginLeft:"10px"}}>Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
@@ -221,98 +307,6 @@ return (<div className="development">
 </div>)  
 }
 
-
-function Linechart()
-{
-  const data = {
-    labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'],
-    datasets: [
-      {
-        label: '',
-        data:[0, 10000, 5000, 15000,10000,20000,15000,25000,20000,30000,25000,40000],
-        fill: true,
-        backgroundColor: '#dbe1eb',
-        borderColor: '#4e73df',
-        tension: 0.5,
-        display:false
-      }
-    ],
-  };
-  
-  const options = {
-    scales: {
-      y: { beginAtZero: true},
-      },
-      maintainAspectRatio:false
-  };
-  return(<div className="linechart">
-   <Card>
-    <Card.Header as="h5" style={{color:"#4e73df",fontWeight:"bold"}}>Earnings Overview <i className="fas fa-ellipsis-v licon" ></i></Card.Header>
-     <Card.Body> 
-  <Line data={data} options={options}  height={250} 
-/>
-   </Card.Body>
-</Card>
-
-</div>)
-}
-
-
-
-function Doughnutchart()
-{
-  const data = {
-    labels: ['Direct','Social','Referral'],
-    datasets: [
-      {
-        label: '',
-        data:[55,30,15],
-        fill: true,
-        backgroundColor: ['#4e73df','#1cc88a','#36b9cc'],
-        tension: 0.5,
-      }
-    ],
-  };
-
- 
-  const options = {
-    scales: {
-      y: { beginAtZero: true},
-    },
-    maintainAspectRatio:false
-    
-  };
-
-  let Drop=()=>
-  {
-    return(<Dropdown>
-    
-     <Dropdown.Menu>
-     <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-     <Dropdown.Divider/>
-       <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-       <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-       <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-     </Dropdown.Menu>
-   </Dropdown>)
-  }
-
-
-  return(<div className="dchart">
-   <Card>
-    <Card.Header as="h5" style={{color:"#4e73df",fontWeight:"bold"}}>Revenue Sources
-    
-    <i className="fas fa-ellipsis-v dcicon" onClick={()=> {return Drop()}} style={{cursor:"pointer"}}></i>
-    </Card.Header>
-    
-     <Card.Body> 
-  < Doughnut data={data} options={options}  height={250}  
-/>
-   </Card.Body>
-</Card>
-
-</div>)
-}
 
 
 

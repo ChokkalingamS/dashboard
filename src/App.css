@@ -13,8 +13,12 @@ body
   background-color:white;
   justify-content: space-between;
   max-width:initial;
+  box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.43);
+  -webkit-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.43);
+  -moz-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.43);
 }
 
+/* Search box  */
 #search-field
 {
   width:20rem;
@@ -80,7 +84,10 @@ body
   border-left: 4px solid;
   background-color: white;
   border-radius:7px;
-  width:300px;
+  width:300px;  
+  box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+  -webkit-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+  -moz-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
 }
 
 /* Remainder Section Icons */
@@ -131,6 +138,9 @@ body
 {
   margin-top:2rem;
   width:400px;
+  box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-webkit-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-moz-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
   
 }
 
@@ -143,6 +153,9 @@ body
   margin-left:1.2rem;
   margin-top:2rem;
   width:900px;
+  box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-webkit-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-moz-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
 }
 
 .licon
@@ -182,6 +195,9 @@ border-style:solid
   border-radius:5px;
   margin:2rem 0 3rem 1rem;
   border: 1px solid rgb(183 195 175);
+  box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-webkit-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-moz-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
 }
 .name-percentage
 {
@@ -195,31 +211,27 @@ border-style:solid
 .bg-account-setup
 {
   background-color:#1cc88a !important; 
-  /* width:100%; */
+  
 }
 
 .bg-payout-details
 {
   background-color:#36b9cc !important; 
-  /* width:100%; */
 }
 
 .bg-server-migration
 {
   background-color:#e74a3b !important;
-  /* width:100%;  */
 }
 
 .bg-sales-tracking
 {
   background-color:#f6c23e !important; 
-  /* width:100%; */
 }
 
 .bg-customer-database
 {
   background-color:#4e73df !important; 
-  /* width:100%; */
 }
 
 /* Illustrations */
@@ -238,6 +250,9 @@ border-style:solid
   border-radius:5px;
   margin:1.5rem;
   border: 1px solid rgb(183 195 175);
+  box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-webkit-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-moz-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
   
 }
 
@@ -266,6 +281,9 @@ border-style:solid
   height:5rem;
   margin-left: 1.1rem;
   border-radius: 5px;
+  box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-webkit-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-moz-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
 }
 
 
@@ -278,6 +296,9 @@ border-style:solid
   border-radius:5px;
   margin:1.5rem; 
   border: 1px solid rgb(183 195 175);
+  box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-webkit-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
+-moz-box-shadow: 10px 13px 39px -8px rgba(0,0,0,0.69);
 
 }
 
@@ -300,8 +321,28 @@ border-style:solid
   left:75rem;
 }
 
+
+/* Responsive Device:Tab */
  @media (max-width:750px)
 {
+  /* dashboard  */
+  .dashboard > p
+  {
+    margin-left: 3rem;
+  }
+  .dashboard > button
+  {
+    margin-right:2rem;
+  }
+
+  /* Progress Bar - Remainder */
+  #pbar
+  {
+    width:8.5rem;
+    margin-top:2.8rem;
+  }
+
+  /* Chart Section */
   .chart
   {
     display: grid;
@@ -312,11 +353,23 @@ border-style:solid
     width: 675px;
     margin:0.5rem auto;
   }
+  .licon
+  {
+    margin-left: 28.5rem;
+  }
+  .dcicon
+  {
+    margin-left: 29.5rem;
+  }
+
+  /* Project */
   .projects
   {
     margin:auto;
     width: 675px;
   }
+
+  /*Color */
   .color-container
   {
     display: grid;
@@ -329,31 +382,6 @@ border-style:solid
     width:630px;
     margin-left: -0.1rem;
   }
-  .dashboard > p
-  {
-    margin-left: 3rem;
-  }
-  .dashboard > button
-  {
-    margin-right:2rem;
-  }
-
-  .licon
-  {
-    margin-left: 28.5rem;
-  }
-  .dcicon
-  {
-    margin-left: 29.5rem;
-  }
-  #pbar
-  {
-    width:8.5rem;
-    margin-top:2.8rem;
-  }
-
-
-
 }
  
 

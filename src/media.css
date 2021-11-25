@@ -1,6 +1,9 @@
-  @media (max-width:500px)
+/* Responsive Device:Phone */
+
+@media (max-width:500px)
 {
 
+  /* Navigation Bar */
   .container
   {
     flex-wrap: wrap-reverse;
@@ -29,6 +32,7 @@
       margin-bottom: 1rem;
   }
 
+  /* Remainder */
   .remainder-content
   {
     width:350px;
@@ -56,6 +60,7 @@
     margin-left:6.3rem;
   }
 
+  /* Chart */
   .chart
   {
      margin:1rem 0 1rem 1rem ; 
@@ -65,7 +70,8 @@
     width:350px;
    
   }
- 
+
+ /* Linechart */
   .linechart
   {
       margin-bottom: 1.5rem;
@@ -75,6 +81,7 @@
     margin-left:8.5rem;
   }
   
+  /* Doughnut Chart */
   .dchart
   {
     margin-top: -1rem;
@@ -84,6 +91,7 @@
     margin-left:9.5rem;
   } 
 
+  /* Project  */
   .projects
   {
     width:350px;
@@ -92,6 +100,7 @@
     margin-top: -1rem;
   }
   
+  /* Illustration  */
   .illustration 
   {
     width:350px;
@@ -102,9 +111,10 @@
   }
   .illustration > img
   {
-    margin-left: 0.5rem;
+    margin-left:3.5rem;
   }
 
+  /* Color */
   .color-container
   {
     margin-left:1.8rem;
@@ -113,6 +123,8 @@
   {
     width:350px;
   }
+
+  /* Development  */
   .development
   {
     width:350px;
@@ -120,6 +132,8 @@
     margin-bottom:2rem;
     margin-top: 0rem;
   }
+
+  /* Footer */
   .footer
   {
     width:450px;
@@ -130,6 +144,7 @@
     margin-right: 4rem;
   }
 
+  /* Floating Icon */
   #float-button
   {
   top:22rem;
