@@ -5,7 +5,7 @@
   {
     flex-wrap: wrap-reverse;
     height:10rem;
-    width:400px;
+    width:450px;
   }
   #search-field 
   {
@@ -122,7 +122,12 @@
   }
   .footer
   {
-    width:400px;
+    width:450px;
+  }
+
+  .footer > p
+  {
+    margin-right: 4rem;
   }
 
   #float-button
@@ -130,5 +135,6 @@
   top:22rem;
   left:21rem;
   }
+
 
 } 
